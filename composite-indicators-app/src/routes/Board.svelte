@@ -37,7 +37,7 @@
       >
         {#each column.items as item (item.id)}
           <div
-            class="card"
+            class="card p-4"
             animate:flip={{ duration: flipDurationMs }}
             on:click={handleClick}
           >
@@ -51,14 +51,14 @@
 
 <style>
   .board {
-    height: 45vh;
+    height: 65vh;
     width: 100%;
     padding: 0.5em;
     margin-bottom: 40px;
   }
   .column {
-    height: 100%;
-    width: 250px;
+    height: 65vh;
+    width: 13em;
     padding: 0.5em;
     margin: 1em;
     float: left;
@@ -67,24 +67,14 @@
     overflow-y: hidden;
   }
   .column-content {
-    height: 100%;
+    height: 60vh;
     /* Notice that the scroll container needs to be the dndzone if you want dragging near the edge to trigger scrolling */
     overflow-y: scroll;
+    justify-items: center;
   }
   .column-title {
-    margin-bottom: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .card {
-    height: 15%;
-    width: 100%;
-    margin: 0.4em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #dddddd;
-    border: 1px solid #333333;
   }
 </style>

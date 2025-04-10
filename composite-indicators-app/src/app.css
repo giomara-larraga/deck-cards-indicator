@@ -1,4 +1,25 @@
-html>
-ml>
-ead>
-style id="injected">
+@import 'tailwindcss';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+@import '@fontsource/open-sans';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+[data-theme='cerberus'] {
+    --heading-font-family: 'Open Sans', sans-serif;
+    --base-font-family: 'Open Sans', sans-serif;
+    --anchor-font-family: 'inherit';
+  }
+
+.card {
+    height: 12em;
+    width: 10em;
+    margin: 0.4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd;
+    border: 1px solid #333333;
+}

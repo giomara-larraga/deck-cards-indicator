@@ -5,7 +5,7 @@
    * @type {any}
    */
   export let items;
-  export let containerWidth = "99vw";
+  export let containerWidth = "100vw";
   export let itemWidth = "10em";
   const flipDurationMs = 300;
   /**
@@ -30,7 +30,8 @@
 >
   {#each items as item (item.id)}
     <div
-      style="flex: 0 0 {itemWidth}"
+      class="card p-4"
+      style="flex: 0 0 {itemWidth}; margin: 0 0.15em"
       animate:flip={{ duration: flipDurationMs }}
     >
       {item.name}
@@ -40,17 +41,10 @@
 
 <style>
   section {
-    height: 150px;
+    height: 13.5em;
     padding: 0.3em;
     background-color: #dee2e6;
     display: flex;
     overflow-x: scroll;
-  }
-  div {
-    height: 120px;
-    display: inline-block;
-    padding: 0.9em;
-    border: 1px solid blue;
-    margin: 0 0.15em;
   }
 </style>
