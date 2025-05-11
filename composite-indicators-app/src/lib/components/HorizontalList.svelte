@@ -19,6 +19,7 @@
    */
   function handleDndFinalize(e) {
     items = e.detail.items;
+    console.log(items);
   }
 </script>
 
